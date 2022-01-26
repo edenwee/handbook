@@ -1,0 +1,36 @@
+- name: Penetration Testing
+  blurb: Test your websites and systems for security vulnerabilities
+  permalink: /services/penetration-testing/
+  iconlink: /assets/img/service-icons/pentesting-icon.png
+- name: Red Team
+  blurb: Be targeted by a skilled adversary
+  permalink: /services/red-team/
+  iconlink: /assets/img/service-icons/red-team-icon.jpg
+- name: Cloud Security Assessment
+  blurb: Find out how to improve the security of your AWS, Azure and Microsoft365 cloud environments
+  permalink: /services/cloud-security-assessment/
+  iconlink: /assets/img/service-icons/cloud-security-icon.jpg
+- name: Security Review
+  blurb: Ensure your key business services and systems are up to scratch
+  permalink: /services/security-review/
+  iconlink: /assets/img/service-icons/security-review-icon.jpg
+- name: Social Engineering
+  blurb: Test the security awareness of your users with phishing, vishing, smishing and USB campaigns
+  permalink: /services/social-engineering/
+  iconlink: /assets/img/service-icons/social-engineering-icon.jpg
+- name: Physical Intrusion
+  blurb: Find out whether attackers can get into your premises
+  permalink: /services/physical-intrusion/
+  iconlink: /assets/img/service-icons/wall-icon.jpg
+- name: Security Strategy
+  blurb: Form a cyber security that supports your organisation's long-term goals
+  permalink: /services/security-strategy/
+  iconlink: /assets/img/service-icons/security-strategy-icon.jpg
+- name: Compliance
+  blurb: Meet your cyber security compliance and regulatory obligations
+  permalink: /services/compliance/
+  iconlink: /assets/img/service-icons/compliance-icon.jpg
+- name: Executive Education
+  blurb: Equip your executives and board members with information needed to deal with cyber risk
+  permalink: /services/executive-education/
+  iconlink: /assets/img/service-icons/executive-education-icon.jpg

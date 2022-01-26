@@ -1,0 +1,26 @@
+{% for item in include.nav_list %} {% assign link_prefix = item.link | slice: 0,
+5 %}
+<li>
+  <a
+    class="nav-link mt-auto"
+    href="{% if link_prefix != 'https' %}{{site.main_site_url}}{% endif %}{{ item.link }}"
+    >{{ item.text }} {% if item.subnav %}&nbsp;<i class="fas fa-angle-down"></i
+    >{% endif %}
+  </a>
+  {% if item.subnav %}
+  <div class="nav-dropdown">
+    {% for subitem in item.subnav %} {% assign sub_link_prefix = subitem.link |
+    slice: 0, 5 %}
+    <a
+      class="subnav-item nav-link"
+      href="{% if sub_link_prefix != 'https' %}{{site.main_site_url}}{% endif %}{{ subitem.link }}"
+      >{{ subitem.text }} {% if subitem.subnav %}&nbsp;<i
+        class="fas fa-angle-down"
+      ></i
+      >{% endif %}
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</li>
+{% endfor %}

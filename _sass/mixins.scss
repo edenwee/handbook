@@ -1,0 +1,38 @@
+@mixin line-indent-list {
+  ul,
+  ol {
+    list-style: none;
+    padding-left: 0;
+    & > li > ul,
+    & > li > ol {
+      padding-left: $std-margin + $small-margin;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        background-color: rgba($primary, 0.4);
+        height: 100%;
+        left: $small-margin;
+      }
+    }
+    li {
+      margin-top: $small-margin;
+      margin-bottom: $small-margin;
+    }
+  }
+}
+
+@mixin contrast-links {
+  a {
+    color: $primary-light;
+    transition: 0.3s;
+    &:hover {
+      color: $contrast;
+    }
+  }
+}
+
+@mixin has-shadow {
+  box-shadow: 0 3px 6px rgba($black, 0.16);
+}

@@ -1,0 +1,37 @@
+<nav class="topnav">
+  <div class="left-box mt-auto">
+    <ul class="navbar-nav navbar-expand-md justify-content-end">
+      {% assign left_nav_items = site.data.nav | where: 'side', 'left' %} {%
+      include nav-listlet.html nav_list=left_nav_items %}
+    </ul>
+  </div>
+  <div class="nav-logo">
+    <a href="/">
+      <img src="/assets/img/Volkis_Logo.svg" alt="" />
+    </a>
+  </div>
+  <div class="right-box mt-auto">
+    <ul class="navbar-nav navbar-expand-md">
+      {% assign right_nav_items = site.data.nav | where: 'side', 'right' %} {%
+      include nav-listlet.html nav_list=right_nav_items %}
+    </ul>
+  </div>
+</nav>
+
+<nav class="topnav-mobile">
+  <div class="nav-logo text-center">
+    <a href="/"><img src="/assets/img/Volkis_Logo.svg" alt="Volkis logo" /></a>
+  </div>
+  <div class="nav-buttons d-flex">
+    <a href="#" class="nav-sandwich my-auto">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </a>
+  </div>
+  <div class="mobile-nav-menu">
+    <ul class="navbar-nav">
+      {% include nav-listlet.html nav_list=site.data.nav %}
+    </ul>
+  </div>
+</nav>

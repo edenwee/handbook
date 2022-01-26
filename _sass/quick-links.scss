@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.quick-links {
+  padding: $small-margin $std-margin $small-margin 0;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  h4 {
+    padding-bottom: $std-margin;
+    border-bottom: 1px solid $grey-200;
+  }
+  @include line-indent-list;
+}

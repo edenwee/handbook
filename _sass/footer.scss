@@ -1,0 +1,22 @@
+@import 'mixins';
+
+footer {
+  @include line-indent-list;
+  flex-shrink: 0;
+  padding-top: $std-margin;
+  padding-bottom: $std-margin;
+  background-color: $primary-dark;
+  color: $primary-light;
+  @include contrast-links;
+  .footer-logo {
+    margin: $std-margin $std-margin;
+    height: 75px;
+    width: auto;
+  }
+  .social-icons {
+    font-size: 1.2rem;
+    a {
+      margin: 0 $small-margin;
+    }
+  }
+}

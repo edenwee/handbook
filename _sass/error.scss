@@ -1,0 +1,18 @@
+.error-container {
+  max-width: map-get($container-max-widths, 'md');
+  margin-top: $std-margin * 3;
+  #handbook-search {
+    box-shadow: 0 3px 6px rgba($black, 0.16);
+  }
+  .suggested-links {
+    margin-top: $std-margin * 4;
+    ul {
+      list-style: none;
+      padding: 0 0;
+    }
+    a {
+      margin-left: $small-margin;
+      margin-right: $small-margin;
+    }
+  }
+}

@@ -1,0 +1,171 @@
+@import 'mixins';
+
+.navbar-nav .nav-link {
+  color: $body-color;
+  padding: $std-margin 20px;
+  transition: 0.3s;
+  position: relative;
+  &:hover {
+    color: $primary;
+    &::before {
+      width: 100%;
+    }
+  }
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: $primary;
+    transition: width 0.3s;
+  }
+}
+
+$nav-logo-width: 152px;
+.topnav {
+  display: flex;
+  background-color: $white;
+  text-transform: uppercase;
+  flex: 0 0 auto; // Yup. Safari strikes again! This line is ONLY needed to fix a bug in Safari ><
+  .nav-logo {
+    padding: $std-margin 20px;
+    img {
+      width: $nav-logo-width;
+    }
+  }
+  .left-box,
+  .right-box {
+    border-top: 1px solid $grey-200;
+    width: calc(50% - #{$nav-logo-width}/ 2);
+  }
+  .left-box {
+    float: left;
+  }
+  .right-box {
+    float: right;
+  }
+  .navbar-nav > li {
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      overflow: visible;
+      .nav-dropdown {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .nav-dropdown {
+      @include has-shadow;
+      position: absolute;
+      background-color: $white;
+      min-width: 240px;
+      z-index: 100;
+      opacity: 0;
+      transform: translateY($std-margin);
+      transition: all 0.3s ease;
+      .subnav-item {
+        display: block;
+        padding-top: $small-margin;
+        padding-bottom: $small-margin;
+        border-top: 1px solid $grey-200;
+        text-transform: none;
+        &:first-child {
+          border-top: none;
+        }
+      }
+    }
+  }
+}
+.topnav-mobile {
+  display: none;
+  position: relative;
+  background-color: $white;
+  padding: $std-margin $std-margin;
+  flex: 0 0 auto; // Yup. Safari strikes again! This line is ONLY needed to fix a bug in Safari ><
+  .nav-logo {
+    width: 100%;
+    img {
+      width: $nav-logo-width * 0.7;
+    }
+  }
+  .nav-buttons {
+    position: absolute;
+    right: $std-margin/8;
+    bottom: 0;
+    top: 0;
+    .nav-sandwich {
+      padding: $std-margin $std-margin;
+      .line {
+        background-color: $primary;
+        height: 2px;
+        width: 24px;
+        transition: 0.3s ease;
+        &:not(:first-child) {
+          margin-top: 4px;
+        }
+      }
+      &.open .line {
+        &:nth-child(1) {
+          transform: rotate(-45deg);
+        }
+        &:nth-child(2) {
+          width: 0%;
+          opacity: 0;
+          margin-top: 0px;
+        }
+        &:nth-child(3) {
+          transform: rotate(45deg);
+          margin-top: -4px;
+        }
+      }
+    }
+  }
+  .mobile-nav-menu {
+    position: fixed;
+    top: 119px;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: $white;
+    z-index: 100;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: ease 0.3s;
+    &.slide-up {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    li {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .nav-link {
+      border-top: 1px solid $grey-200;
+      text-transform: uppercase;
+    }
+    .subnav-item {
+      text-transform: unset;
+    }
+    .subnav-item {
+      padding-left: $std-margin * 3;
+    }
+    .navbar-nav {
+      border-bottom: 1px solid $grey-200;
+    }
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, 'md')) {
+  .topnav {
+    display: none;
+  }
+  .topnav-mobile {
+    display: flex;
+  }
+}

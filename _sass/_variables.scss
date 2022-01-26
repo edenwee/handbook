@@ -1,0 +1,45 @@
+$white: #fff;
+$grey-100: #f2f4f4;
+$grey-150: #e5e8e8;
+$grey-200: #bfc2c2;
+$grey-800: #414042;
+$grey-900: #222;
+$black: #000;
+$primary: #4e7a90;
+$primary-light: #5e9ca8;
+$primary-dark: #001c32;
+$primary-dark-off: #082c44;
+$contrast: #d4e50e;
+$charcoal: #3b3a3d;
+
+$body-bg: #f2f4f4;
+$body-color: $grey-900;
+$link-color: $primary-light;
+
+$table-border-colour: #ddd;
+
+$std-margin: 16px;
+$small-margin: 8px;
+$large-margin: 24px;
+
+$headings-margin-bottom: 1rem;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 960px,
+  lg: 1140px,
+  xl: 1366px,
+);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1398px,
+);
+
+$font-family-sans-serif: Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+
+$jumbotron-x-padding: 8rem;

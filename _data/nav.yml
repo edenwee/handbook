@@ -1,0 +1,36 @@
+- text: About Volkis
+  link: /about/
+  side: left
+  subnav:
+    - text: Partnerships
+      link: /about/partnerships/
+    - text: Handbook
+      link: https://handbook.volkis.com.au
+- text: What we do
+  link: /services/
+  side: left
+  subnav:
+    - text: Penetration Testing
+      link: /services/penetration-testing/
+    - text: Red Team
+      link: /services/red-team/
+    - text: Cloud Security Assessment
+      link: /services/cloud-security-assessment/
+    - text: Security Review
+      link: /services/security-review/
+    - text: Social Engineering
+      link: /services/social-engineering/
+    - text: Physical Intrusion
+      link: /services/physical-intrusion/
+    - text: Security Strategy
+      link: /services/security-strategy/
+    - text: Compliance
+      link: /services/compliance/
+    - text: Executive Education
+      link: /services/executive-education/
+- text: Get in touch
+  link: /contact/
+  side: right
+- text: Blog
+  link: /blog/
+  side: right

@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="container-lg mb-5">
+  <div class="row">
+    <div class="d-none d-xl-block col-md-3 p-0">
+      {% include quick-links.html %}
+    </div>
+    <div class="col-xl-9 col-lg-12 page-content has-shadow">
+      <div class="content-info">
+        <div class="row">
+          <div class="col-sm-10">{% include breadcrumbs.html %}</div>
+          <div class="col-sm-2">
+            <div class="edit-link float-right">
+              <small
+                ><a href="{{site.repo_url}}{{page.path}}" target="_blank"
+                  >Edit on GitLab
+                  <sup class="fas fa-external-link-alt"></sup></a
+              ></small>
+            </div>
+          </div>
+        </div>
+        {% include search.html %}
+      </div>
+      <div class="post-body">{{ content }}</div>
+      <!-- Image Modal -->
+      <div class="modal fade" id="imageModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <img src="#" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

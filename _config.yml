@@ -1,0 +1,27 @@
+title: Volkis Handbook
+email: info@volkis.com.au
+url: https://handbook.volkis.com.au
+main_site_url: https://www.volkis.com.au
+repo_url: https://gitlab.com/volkis/handbook.volkis.com.au/-/edit/master/
+defaults:
+  - scope:
+      path: ''
+      type: 'books'
+    values:
+      layout: 'page'
+
+twitter_link: https://twitter.com/volkisau
+linkedin_link: https://www.linkedin.com/company/volkis/
+gitlab_link: https://gitlab.com/volkis
+youtube_link: https://www.youtube.com/channel/UCtevWUT3TQ7ZAaRLrLY6BOA
+
+collections:
+  books:
+    output: true
+    permalink: /:path/
+
+exclude:
+  - README.md
+
+redirect_from:
+  json: false

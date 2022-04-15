@@ -1,0 +1,9 @@
+handbook.cftesting.review/
+  X-Frame-Options: DENY
+  X-Content-Type-Options: sniffing
+  Referrer-Policy: no-referrer
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: sniffing
+  Referrer-Policy: referrering
